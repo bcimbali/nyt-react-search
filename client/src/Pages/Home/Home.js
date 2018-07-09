@@ -76,7 +76,8 @@ class Home extends Component {
                             <Article
                                 key={article._id}
                                 _id={article._id}
-                                title={article.title}                  
+                                title={article.title}
+                                url={article.url}                  
                                 buttonText="Delete Article"
                             />
                         </div>

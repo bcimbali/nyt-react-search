@@ -48,31 +48,38 @@ class Home extends Component {
     // Render gets called when state changes
     render() {
         return (
-                <div className="d-flex justify-content-center row">
-                    <div className="border col-12 mx-auto text-center">
-                    <p>Results</p>
+                <div className="d-flex justify-content-center p-2 row">
+                    <div className="d-flex justify-content-center p-2 row">
+                    <div className="border bg-info col-10 mx-auto text-center">
+                        <h3>Results</h3>
+                    </div>
                     {this.state.articles.map(article => (
-                        
-                        <Article
-                            key={article._id}
-                            _id={article._id}
-                            title={article.headline.main}
-                            url={article.web_url}
-                            date={article.pub_date}
-                            handleClick={this.handleArticleSave}
-                            buttonText="Save Article"
-                        />
+                        <div className="border col-10">
+                            <Article
+                                key={article._id}
+                                _id={article._id}
+                                title={article.headline.main}
+                                url={article.web_url}
+                                date={article.pub_date}
+                                handleClick={this.handleArticleSave}
+                                buttonText="Save Article"
+                            />
+                        </div>
                     ))}
                     </div>
-                    <div className="border col-12 mx-auto text-center">
-                    <p>Saved Articles</p>
+                    <div className="d-flex justify-content-center p-2 row">
+                        <div className="border bg-info col-10 mx-auto text-center">
+                            <h3>Saved Articles</h3>
+                        </div>
                     {this.state.savedArticles.map(article => (
-                        <Article
-                            key={article._id}
-                            _id={article._id}
-                            title={article.title}                  
-                            buttonText="Delete Article"
-                        />
+                        <div className="border col-10 mx-auto text-center">
+                            <Article
+                                key={article._id}
+                                _id={article._id}
+                                title={article.title}                  
+                                buttonText="Delete Article"
+                            />
+                        </div>
                     ))}
                     </div>
                 </div>

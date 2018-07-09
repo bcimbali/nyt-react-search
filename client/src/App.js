@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import Header from './Components/Header';
 
 const App = () => (
-  <Router className="fluid-container">
+  <Router className="container">
     <div className="d-flex justify-content-center row">
       <Header></Header>
       <Switch>

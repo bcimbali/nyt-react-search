@@ -49,6 +49,24 @@ class Home extends Component {
     render() {
         return (
                 <div className="d-flex justify-content-center p-2 row">
+                    <div className="d-flex justify-content-center row w-100">
+                        <div className="border bg-info col-10 mx-auto text-center">
+                            <h3>Search</h3>
+                        </div>
+                        <div className="border col-10 text-center">
+                            <label>Topic</label>
+                            <input className="w-100" id="js-topic-search"></input>
+                            <br />
+                            <label>Start Year</label>
+                            <input className="w-100"  type="date" id="js-start-year-search"></input>
+                            <br />
+                            <label>End Year</label>
+                            <input className="w-100"  type="date" id="js-end-year-search"></input>
+                            <br />
+                            <button className="btn btn-success search" onClick={() => this.getArticles()}>Search</button>
+                        </div>
+                    </div>
+
                     <div className="d-flex justify-content-center p-2 row">
                     <div className="border bg-info col-10 mx-auto text-center">
                         <h3>Results</h3>

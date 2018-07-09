@@ -48,29 +48,34 @@ class Home extends Component {
     // Render gets called when state changes
     render() {
         return (
-            <div>
-                <p>I am a list of articles.</p>
-                {this.state.articles.map(article => (
-                    <Article
-                        key={article._id}
-                        _id={article._id}
-                        title={article.headline.main}
-                        url={article.web_url}
-                        date={article.pub_date}
-                        handleClick={this.handleArticleSave}
-                        buttonText="Save Article"
-                    />
-                ))}
-                <p>Saved Articles</p>
-                {this.state.savedArticles.map(article => (
-                    <Article
-                        key={article._id}
-                        _id={article._id}
-                        title={article.title}                  
-                        buttonText="Delete Article"
-                    />
-                ))}
-            </div>
+                <div className="d-flex justify-content-center row">
+                    <div className="border col-12 mx-auto text-center">
+                    <p>Results</p>
+                    {this.state.articles.map(article => (
+                        
+                        <Article
+                            key={article._id}
+                            _id={article._id}
+                            title={article.headline.main}
+                            url={article.web_url}
+                            date={article.pub_date}
+                            handleClick={this.handleArticleSave}
+                            buttonText="Save Article"
+                        />
+                    ))}
+                    </div>
+                    <div className="border col-12 mx-auto text-center">
+                    <p>Saved Articles</p>
+                    {this.state.savedArticles.map(article => (
+                        <Article
+                            key={article._id}
+                            _id={article._id}
+                            title={article.title}                  
+                            buttonText="Delete Article"
+                        />
+                    ))}
+                    </div>
+                </div>
         )
     }
 };

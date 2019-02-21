@@ -16,7 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.6.1",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.10"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -24,6 +24,6 @@
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.4.3"
+    "mongoose": "^5.4.14"
   }
 }
